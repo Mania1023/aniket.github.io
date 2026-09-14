@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA - India Ka Sabse Popular Tipper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 10px;
+        }
+        .container {
+            width: 100%;
+            max-width: 340px; /* Reduced container width for a compact, mobile-first look */
+            background: #000000;
+            border-radius: 16px;
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            border: 1px solid #1a1a1a;
+        }
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        .logo-container {
+            position: relative;
+            width: 120px; /* Scaled down logo size */
+            height: 120px;
+            margin: 0 auto 15px;
+            background: radial-gradient(circle, #5b149b 0%, #0d0118 100%);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+            overflow: hidden;
+        }
+        .logo-text {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #00bfff;
+            position: relative;
+            z-index: 2;
+            letter-spacing: -1px;
+        }
+        .logo-ring {
+            position: absolute;
+            width: 105px;
+            height: 60px;
+            border: 4px solid #ff1493;
+            border-radius: 50%;
+            transform: rotate(-25px);
+            z-index: 1;
+            box-shadow: 0 0 10px #ff1493;
+        }
+        .timer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4px;
+            margin: 15px 0;
+            background: #0a0a0a;
+            padding: 8px 4px;
+            border-radius: 8px;
+        }
+        .timer-block .time {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .timer-block .label {
+            font-size: 0.55rem;
+            color: #aaaaaa;
+            text-transform: uppercase;
+            margin-top: 2px;
+            letter-spacing: 0.5px;
+        }
+        .tagline {
+            font-size: 0.95rem;
+            font-style: italic;
+            color: #ffd700;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .target-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+        .btn-telegram {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: linear-gradient(135deg, #0088cc 0%, #006699 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 16px; /* Slightly more compact button padding */
+            font-size: 0.95rem;
+            font-weight: 700;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-telegram:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 8px rgba(0, 136, 204, 0.3);
+        }
+        .btn-telegram i {
+            font-size: 1.05rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>RSA</h1>
+    
+    <div class="logo-container">
+        <div class="logo-text">RSA</div>
+        <div class="logo-ring"></div>
+    </div>
+    
+    <div class="timer-grid">
+        <div class="timer-block">
+            <div class="time">00</div>
+            <div class="label">Days</div>
+        </div>
+        <div class="timer-block">
+            <div class="time">00</div>
+            <div class="label">Hours</div>
+        </div>
+        <div class="timer-block">
+            <div class="time">00</div>
+            <div class="label">Minutes</div>
+        </div>
+        <div class="timer-block">
+            <div class="time" id="seconds">10</div>
+            <div class="label">Seconds</div>
+        </div>
+    </div>
+    
+    <div class="tagline">India Ka Sabse Popular Tipper</div>
+    
+    <div class="target-text">My Target***Punter Profit</div>
+    
+    <a href="https://t.me/+oj51A9QpYAYyYmFl" class="btn-telegram">
+        <i class="fa-brands fa-telegram"></i>
+        JOIN TELEGRAM NOW
+        <i class="fa-brands fa-telegram"></i>
+    </a>
+</div>
+
+<script>
+    let timeLeft = 10;
+    const secondsElement = document.getElementById('seconds');
+    
+    setInterval(() => {
+        if (timeLeft <= 0) {
+            timeLeft = 10;
+        } else {
+            timeLeft--;
+        }
+        secondsElement.textContent = timeLeft < 10 ? '0' + timeLeft : timeLeft;
+    }, 1000);
+</script>
+
+</body>
+</html>
